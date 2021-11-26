@@ -4,48 +4,30 @@ from LMDPs.plotting import plot_as_matrix as plotmat
 import pickle
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
-def get_MAE_HL_errors(path, title, xlim, ylim=1, figsize=(7,7), plot_only=[], key=None):
-    f = open(path,'rb')
-    d = pickle.load(f)
-    plt.close('all')
+def get_HL_errors(filepaths, MAX_N_SMAPLES=5000):
     
-    fig, ax = plt.subplots(1,1, figsize=figsize)
+    # Returns the mean, mean+std, mean-std for the given files.
+    assert isinstance(filepaths, list), 'filepaths argument must be a list of paths.'
     
-    
-    auxiliary_d = {}
-    for k in d:
-        auxiliary_d[k] = min(d[k][2])
-        
-    min_combination_c0_c1 = min(auxiliary_d, key=auxiliary_d.get)
+    all_errors = []
 
-    ax.set_title(f'{title}. Min.error with {min_combination_c0_c1}')
+    for filepath in filepaths:
+        with open(filepath, 'rb') as f:
+            d = pickle.load(f)
+            for k in d:
+                    if 'flat' in filepath:
+                        _, errors = d[k]
+                    else:
+                        _, _, errors, _ = d[k]
+                    all_errors.append(errors[:MAX_N_SMAPLES])
 
-    colormap = plt.cm.gist_ncar
-    plt.gca().set_prop_cycle(plt.cycler('color', plt.cm.jet(np.linspace(0, 1, len(d)))))
-        
-    plotted = []
-    for k in d:
-        
-        if plot_only and k not in plot_only:
-            continue 
-        else:
-            Z, Z_subtasks, errors, errors_i = d[k]
-            ax.plot(errors, linewidth=1, markevery=25)
+    all_errors = np.array(all_errors, dtype=np.float64)
+    
+    var = np.std(all_errors, axis=0)
+    mean = np.mean(all_errors, axis=0)
             
-        plotted.append(k)
+    return mean, mean-var, mean+var
 
-    ax.legend([f'c={key} min = {min(d[key][3]):1.3E}' for key in plotted], fontsize=6)
-    ax.set_xlim((0,xlim))
-    ax.set_ylim((0,ylim))
-    ax.set_ylabel('error')
-    ax.set_xlabel('n_samples')
-
-    
-    if key is None:
-        return d[min_combination_c0_c1]
-    else:
-        return d[key]
-        
 def get_MAE_plain_Z_learning(path, title, xlim, ylim):
     
     aux = pickle.load(open(path, 'rb'))
@@ -154,7 +136,7 @@ def plot_taxi(Z, states, key, dim, title, figsize=(5, 10), annotated=False, save
     return fig
 
 
-def plot_gridworld(V, title, figsize=(10, 10), annotated=False, save_path=None):
+def plot_nroom(V, title, figsize=(10, 10), annotated=False, save_path=None):
     fig = plt.figure(figsize=figsize)
 
     ax = plt.gca()

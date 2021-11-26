@@ -29,7 +29,7 @@ if __name__ == '__main__':
     cs = [1000, 10000, 30000, 50000]
 
     if version in ('1', '2', '3'):
-        print(f'Executing variant {version}')
+        print(f'Executing version {version}')
         results = {}
         for c0 in c0s:
             for c1 in c1s:

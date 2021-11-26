@@ -62,8 +62,6 @@ def HRL(version, c0, c1, **kargs):
     alphaHL = c0 / (c0 + KH)
     alphaLL = c1 / (c1 + KL)
 
-    counter = {s:0 for s in abs_states}
-
     while n_samples < MAX_N_SAMPLES:
 
         n_episodes += 1
@@ -107,20 +105,8 @@ def HRL(version, c0, c1, **kargs):
                 proj_next_state = abs_states[idx_proj_next_state] 
                 next_state = unproject_state(proj_next_state, current_room, ROOM_SIZE)
 
-                # Perform Intra-Task learning
-                probabilities = np.zeros((5, 30))
-                next_sampled_states = []
-
-                for s in range(5):
-                    probabilities[s, :] = (P_[idx_proj_state, :] * Z_SUBTASKS[s, :] / np.nansum(P_[idx_proj_state, :] * Z_SUBTASKS[s, :]))
-                    next_sampled_states.append((s, np.random.choice(len(abs_states), p=probabilities[s, :])))
-
-                # compute Importance Sampling (IS) weight
-                isw = probabilities[np.array(next_sampled_states).T[0], np.array(next_sampled_states).T[1]] / P_[idx_proj_state, np.array(next_sampled_states).T[1]] 
-                isw[isw!=0] = 1 / isw[isw!=0]
-                
                 # Update the sub-tasks doing off-policy intra-task learning (equivalent to IS).
-                Z_SUBTASKS[:, idx_proj_state] = (1-alphaLL) * Z_SUBTASKS[:, idx_proj_state] + alphaLL * np.exp(R_[:, idx_proj_state]/LAMBDA) * np.multiply(P_[None, idx_proj_state, :], Z_SUBTASKS[:, :]).sum(axis=1)
+                Z_SUBTASKS[:, idx_proj_state] = (1-alphaLL) * Z_SUBTASKS[:, idx_proj_state] + alphaLL * np.exp(R_[:, idx_proj_state]/LAMBDA) * np.nansum(np.multiply(P_[None, idx_proj_state, :], Z_SUBTASKS[:, :]), axis=1)
             
                 # V1: if current state is in the exit set, as agent transitions from it, it should be updated
                 if state in exit_set and version=="V1":

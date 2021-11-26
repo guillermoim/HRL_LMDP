@@ -17,6 +17,7 @@ def ground_truth(**kargs):
     _, _, _, P, R = create_flat_mdp(GRID_SIZE, ROOM_SIZE, GOAL_POS, GOAL_ROOMS)
 
     G = np.diagflat(np.exp(R/LAMBDA))
+    P[np.isnan(P)]= 0.
     
     Z = power_method(P, G, sparse=True, n_iter=2500)
 

@@ -19,7 +19,6 @@ def create_config(name, grid_size, goal_rooms, max_n_samples, lamda=1, r_dim=5, 
     }
     
     P, abs_states, R = create_room_hierarchical(r_dim, goal_pos)
-
     P[np.isnan(P)]= 0.
 
     subtasks = []

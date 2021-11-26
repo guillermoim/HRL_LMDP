@@ -111,10 +111,6 @@ def HRL(version, c0, c1, **kargs):
 
                 for s in range(4):
                     probabilities[s, :] = (P_[idx_proj_state, :] * Z_SUBTASKS[s, :] / np.nansum(P_[idx_proj_state, :] * Z_SUBTASKS[s, :]))
-                    if np.any(np.isnan(probabilities)):
-                        print(np.where(np.isnan(P)))
-                        print(proj_state, Z_SUBTASKS[s, :])
-                        exit()
                     next_sampled_states.append((s, np.random.choice(len(abs_states), p=probabilities[s, :])))
 
                 # Update the sub-tasks doing off-policy intra-task learning (equivalent to IS).
