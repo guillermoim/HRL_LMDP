@@ -13,7 +13,22 @@ We show that our approach is significantly more sample efficient than that of a 
 
 Results are attached in the ```results```folder and can be readed using the ```notebooks``` provided. Experiments can be re-run using the ```.sh``` scripts provided. The code provided for both domains should be enough to implement this method to further domains.
 
+Here there are enclosed the Mean Absolute Error over the value function for the several versions of the proposed algorithm in the N-Room and Taxi domains. Plots show the mean over several seeds as well as several combinations of $\alpha_\mathcal{l}$ and the standard deviation.
+
 ### N-Room domain
+
+<table>
+  <tr>
+    <td> <img src="notebooks/pictures/nroom_3_3-1.png"  alt="1" width = 240px height = 140px ></td>
+    <td> <img src="notebooks/pictures/nroom_5_5-1.png"  alt="1" width = 240px height = 140px ></td>
+    <td> <img src="notebooks/pictures/nroom_8_8-1.png"  alt="1" width = 240px height = 140px ></td>
+   </tr> 
+</table>
 
 ### Taxi domain
 
+<table>
+  <tr>
+    <td> <img src="notebooks/pictures/taxi_5-1.png"  alt="1" width = 200px height = 140px ></td>
+    <td> <img src="notebooks/pictures/taxi_10-1.png"  alt="1" width = 200px height = 140px ></td>
+</table>
