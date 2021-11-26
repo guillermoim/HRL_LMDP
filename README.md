@@ -1,7 +1,7 @@
 # Globally Optimal HRL for LMDPs
 [![Python 3.7.8](https://img.shields.io/badge/Python-3.7.8-blue)](https://www.python.org/downloads/release/python-378/)
 
-Code for the publication [Globally Optimal Hierarchical Reinforcement Learning for Linearly-solvable Markov Decision Processes](https://arxiv.org/abs/2106.15380) (Infante et al., 2021).
+Code for the publication [Globally Optimal Hierarchical Reinforcement Learning for Linearly-solvable Markov Decision Processes](https://arxiv.org/abs/2106.15380). **Authors:** Guillermo Infante, Anders Jonsson and Vicenç Gómez
 
 ## **Abstract**
 
@@ -14,4 +14,3 @@ We show that our approach is significantly more sample efficient than that of a 
 
 ### Taxi domain
 
-**Authors:** Guillermo Infante, Anders Jonsson and Vicenç Gómez
