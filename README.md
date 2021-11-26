@@ -11,6 +11,8 @@ We show that our approach is significantly more sample efficient than that of a 
 
 ## **Results**
 
+Results are attached in the ```results```folder and can be readed using the ```notebooks``` provided. Experiments can be re-run using the ```.sh```scripts provided.
+
 ### N-Room domain
 
 ### Taxi domain
