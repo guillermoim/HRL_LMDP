@@ -25,6 +25,18 @@ Here there are enclosed the Mean Absolute Error over the value function for the 
    </tr> 
 </table>
 
+<div align="center">
+  <img src="notebooks/pictures/nroom_3_3-1.png" width="50%" height="50%">
+</div>
+
+<!--<div align="center">
+  <img src="notebooks/pictures/nroom_5_5-1.png" width="50%" height="50%">
+</div>-->
+
+<!--<div align="center">
+  <img src="notebooks/pictures/nroom_8_8-1.png" width="50%" height="50%">
+</div>-->
+
 ### Taxi domain
 
 <table>
