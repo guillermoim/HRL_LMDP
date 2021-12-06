@@ -43,9 +43,12 @@ Here there are enclosed the Mean Absolute Error over the value function for the 
 
 <table>
   <tr>
-    <td> <img src="notebooks/pictures/taxi_5-1.png"  alt="1" width = "40%" height = "40%" ></td>
-    <td> <img src="notebooks/pictures/taxi_10-1.png"  alt="1" width = "40%" height = "40%" ></td>
 </table>
+
+<div align="center">
+  <img src="notebooks/pictures/taxi_5-1.png"  alt="1" width = "40%" height = "40%" >
+  <img src="notebooks/pictures/taxi_10-1.png"  alt="1" width = "40%" height = "40%">
+</div>
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
