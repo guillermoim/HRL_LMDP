@@ -17,19 +17,19 @@ Here there are enclosed the Mean Absolute Error over the value function for the 
 
 ### N-Room domain
 
-<table>
+<!-- <table>
   <tr>
     <td> <img src="notebooks/pictures/nroom_3_3-1.png"  alt="1" width = "30%" height = "30%" ></td>
     <td> <img src="notebooks/pictures/nroom_5_5-1.png"  alt="1" width = "30%" height = "30%" ></td>
     <td> <img src="notebooks/pictures/nroom_8_8-1.png"  alt="1" width = "30%" height = "30%" ></td>
    </tr> 
-</table>
+</table> -->
 
-<!-- <div align="center">
+<div align="center">
   <img src="notebooks/pictures/nroom_3_3-1.png" width="50%" height="50%">
   <img src="notebooks/pictures/nroom_5_5-1.png"  alt="1" width = "30%" height = "30%" >
   <img src="notebooks/pictures/nroom_8_8-1.png"  alt="1" width = "30%" height = "30%" >
-</div>-->
+</div>
 
 <!--<div align="center">
   <img src="notebooks/pictures/nroom_5_5-1.png" width="50%" height="50%">
