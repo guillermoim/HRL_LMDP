@@ -19,15 +19,15 @@ Here there are enclosed the Mean Absolute Error over the value function for the 
 
 <table>
   <tr>
-    <td> <img src="notebooks/pictures/nroom_3_3-1.png"  alt="1" width = 240px height = 140px ></td>
-    <td> <img src="notebooks/pictures/nroom_5_5-1.png"  alt="1" width = 240px height = 140px ></td>
-    <td> <img src="notebooks/pictures/nroom_8_8-1.png"  alt="1" width = 240px height = 140px ></td>
+    <td> <img src="notebooks/pictures/nroom_3_3-1.png"  alt="1" width = "30%" height = "30%" ></td>
+    <td> <img src="notebooks/pictures/nroom_5_5-1.png"  alt="1" width = "30%" height = "30%" ></td>
+    <td> <img src="notebooks/pictures/nroom_8_8-1.png"  alt="1" width = "30%" height = "30%" ></td>
    </tr> 
 </table>
 
-<div align="center">
+<!-- <div align="center">
   <img src="notebooks/pictures/nroom_3_3-1.png" width="50%" height="50%">
-</div>
+</div>-->
 
 <!--<div align="center">
   <img src="notebooks/pictures/nroom_5_5-1.png" width="50%" height="50%">
@@ -41,6 +41,11 @@ Here there are enclosed the Mean Absolute Error over the value function for the 
 
 <table>
   <tr>
-    <td> <img src="notebooks/pictures/taxi_5-1.png"  alt="1" width = 200px height = 140px ></td>
-    <td> <img src="notebooks/pictures/taxi_10-1.png"  alt="1" width = 200px height = 140px ></td>
+    <td> <img src="notebooks/pictures/taxi_5-1.png"  alt="1" width = "40%" height = "40%" ></td>
+    <td> <img src="notebooks/pictures/taxi_10-1.png"  alt="1" width = "40%" height = "40%" ></td>
 </table>
+
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
