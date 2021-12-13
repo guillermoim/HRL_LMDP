@@ -15,6 +15,8 @@ Results are attached in the ```results```folder and can be readed using the ```n
 
 Here there are enclosed the Mean Absolute Error over the value function for the several versions of the proposed algorithm in the N-Room and Taxi domains. Plots show the mean and the standard deviation over several seeds as well as several combinations of ![formula](https://render.githubusercontent.com/render/math?math=\alpha_\mathcal{l}).
 
+The code for the options model is available [here](https://github.com/guillermoim/options).
+
 ### N-Room domain
 
 <!-- <table>
