@@ -39,8 +39,8 @@ def create_config(name, grid_size, goal_rooms, max_n_samples, lamda=1, r_dim=5, 
     pickle.dump(execution, open(f'configs/nroom/{name}.dict', 'wb'))
 
 if __name__ == '__main__':
-    create_config('3x3_goal@0-0_rooms5x5', (3,3), [(0, 0)], 50000, goal_pos=(2,3))
-    create_config('5x5_goal@0-0_rooms3x3', (5,5), [(0, 0)], 50000, goal_pos=(1,1), r_dim=3)
-    create_config('8x8_goal@0-0_rooms5x5', (8,8), [(0, 0)], 50000, goal_pos=(2,3))
+    create_config('3x3_goal@0-0_rooms5x5', (3,3), [(0, 0)], 1e5, goal_pos=(2,3))
+    create_config('5x5_goal@0-0_rooms3x3', (5,5), [(0, 0)], 1e5, goal_pos=(1,1), r_dim=3)
+    create_config('8x8_goal@0-0_rooms5x5', (8,8), [(0, 0)], 1e5, goal_pos=(2,3))
 
 

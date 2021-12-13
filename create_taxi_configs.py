@@ -40,7 +40,5 @@ def create_config(name, dim, max_n_samples, lambda_=1):
 
 if __name__ == '__main__':
 
-    create_config('taxi_5_1', 5, 5000, 1)
-    create_config('taxi_10_1', 10, 15000, 1)
-    create_config('taxi_5_10', 5, 5000, 10)
-    create_config('taxi_10_10', 10, 15000, 10)
+    create_config('taxi_5_1', 5, 1e5, 1)
+    create_config('taxi_10_1', 10, 1e5, 1)

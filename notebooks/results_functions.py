@@ -21,10 +21,13 @@ def get_HL_errors(filepaths, MAX_N_SMAPLES=5000):
                         _, _, errors, _ = d[k]
                     all_errors.append(errors[:MAX_N_SMAPLES])
 
-    all_errors = np.array(all_errors, dtype=np.float64)
+    all_errors = np.array(all_errors, dtype=np.float64)    
     
-    var = np.std(all_errors, axis=0)
+    var = np.std(all_errors / all_errors.max(), axis=0)
     mean = np.mean(all_errors, axis=0)
+
+    mean = mean / mean.max()
+
             
     return mean, mean-var, mean+var
 
