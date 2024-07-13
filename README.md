@@ -1,5 +1,4 @@
-
-<h1 style="text-align: center;"># Globally Optimal HRL for LMDPs</h1>
+<p style="text-align: center;"> Globally Optimal HRL for LMDPs</p>
 
 [![Python 3.7.8](https://img.shields.io/badge/Python-3.7.8-blue)](https://www.python.org/downloads/release/python-378/)
 
